@@ -19,6 +19,8 @@ const distancia_viajem_km = 150;
 let preco_combustivel = 0;
 let tipo_combustivel = 'Gasolina';
 
+const litros_consumidos = distancia_viajem_km / gasto_medio_km;
+
 if (tipo_combustivel === 'Etanol') {
     preco_combustivel = preco_etanol;
 } else {
@@ -27,10 +29,21 @@ if (tipo_combustivel === 'Etanol') {
 console.log('Tipo do combustivel:')
 console.log(tipo_combustivel)
 
-const litros_consumidos = distancia_viajem_km / gasto_medio_km;
 const valor_gasto = litros_consumidos * preco_combustivel;
 console.log('Litros consumidos:')
 console.log(litros_consumidos);
 console.log('Valor gasto da viagem:')
 console.log(valor_gasto.toFixed(2));
+
+
+/*CASO UTILIZE VARIAVEL/CONST DENTRO DO BLOCO CONDICIONAL, DEVO IMPRIMI-LO DENTRO DA ESTRUTURA.
+
+if (tipo_combustivel === 'Etanol') {
+    const valorViagem = litros_consumidos * preco_etanol;
+    console.log(valorViagem.toFixed(2));
+} else {
+    const valorViagem = litros_consumidos * preco_gasolina;
+    console.log(valorViagem.toFixed(2));
+}
+*/
 
