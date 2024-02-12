@@ -9,20 +9,16 @@ Condição de pagamento:
 */
 
 const valor_produto = 100;
-const formaDePagamento = 4;
+const formaDePagamento = 1;
 
-if (formaDePagamento === 1){
-    const pagamento_debito = valor_produto - (valor_produto * 0.10);
-    console.log(pagamento_debito);
+if (formaDePagamento === 1){   
+    console.log(valor_produto - (valor_produto * 0.10));
 } else if (formaDePagamento === 2){
-    const pagamento_avista = valor_produto - (valor_produto * 0.15);
-    console.log(pagamento_avista);
+    console.log(valor_produto - (valor_produto * 0.15));
 } else if (formaDePagamento === 3){
-    const pagamento_2x = valor_produto;
-    console.log(pagamento_2x);
+    console.log(valor_produto);
 } else if(formaDePagamento === 4){
-    const pagamento_acima2x = valor_produto + (valor_produto * 0.10);
-    console.log(pagamento_acima2x);
+    console.log(valor_produto + (valor_produto * 0.10));
 } else {
-    console.log('Digite uma forma de pagamento válida')
+    console.log('Digite uma forma de pagamento válida.')
 }
